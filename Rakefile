@@ -11,6 +11,9 @@ Dotenv.load('.env')
 task :default do
   aws_response = CreateProvisioningClaim.new(ENV['AWS_TEMPLATE_NAME']).run
 
+  print 'Please connect to device WiFi AP and press ENTER to continue...'
+  gets
+
   device_configuration = DeviceConfiguration.new(
     ENV['DEVICE_NAME'],
     aws_response.certificate_pem,

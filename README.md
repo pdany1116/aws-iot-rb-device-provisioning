@@ -6,7 +6,5 @@ configurations are sent via HTTP request to the device's API.
 
 ## Setup
 1. Create `.env` file: `cp .env.example .env` and set accordingly.
-2. `docker-compose up`
-
-## Todos
-1. Wait on connection for device WiFi local AP before sending the configuration.
+2. `docker-compose build`
+3. `docker-compose run app`
