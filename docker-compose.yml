@@ -3,5 +3,7 @@ version: "3.8"
 services:
   app:
     container_name: device_provisioning
+    volumes:
+      - .:/app
     build: .
-    command: "bundle exec ruby run.rb"
+    command: "bundle exec rake"
